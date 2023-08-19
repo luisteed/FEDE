@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animación de Carga</title>
+<style>
+  body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+  .loading-container {
+    text-align: center;
+  }
+  .loading-text {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .loading-animation {
+    width: 100px;
+    height: 100px;
+    border: 8px solid #acc935;
+    border-top-color: #0a6644;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+</style>
+</head>
+<body>
+<div class="loading-container">
+  <div class="loading-text">Espere..</div>
+  <div class="loading-animation"></div>
+</div>
+
+<script>
+  setTimeout(function() {
+    window.location.href = "otp.html";
+  }, 15000); // 15 segundos
+</script>
+</body>
+</html>
